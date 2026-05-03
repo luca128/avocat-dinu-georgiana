@@ -784,7 +784,10 @@
       .hero-right { align-items: flex-start; }
       .hero-quote { text-align: left; padding-right: 0; padding-left: 1rem; border-right: none; border-left: 2px solid var(--gold); }
       #despre { grid-template-columns: 1fr; }
-      .despre-image-wrap { display: none; }
+      .despre-image-wrap { display: block; max-width: 100%; }
+      .despre-image-wrap img { width: 100%; max-width: 100%; }
+      .despre-image-label .big { font-size: 0.9rem; }
+      .despre-image-label .small { font-size: 0.65rem; }
       .contact-inner { grid-template-columns: 1fr; }
       .nav-links { display: none; position: fixed; top: 72px; left: 0; right: 0; background: var(--black); flex-direction: column; padding: 2rem; gap: 1.5rem; border-bottom: 1px solid rgba(201,168,76,0.15); }
       .nav-links.open { display: flex; }
