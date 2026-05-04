@@ -10,118 +10,39 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
-    :root {
-      --black: #e8e0d0;
-      --black-2: #dfd7c5;
-      --gold: #c9a84c;
-      --white: #1a1208;
-      --gray: #6b6252;
-      --gray-light: #3d3526;
-    }
+    :root { --black: #e8e0d0; --black-2: #dfd7c5; --gold: #c9a84c; --white: #1a1208; --gray: #6b6252; --gray-light: #3d3526; }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body { font-family: 'Jost', sans-serif; background: var(--black); color: var(--white); overflow-x: hidden; line-height: 1.8; }
-
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 1.6rem 5vw;
-      background: rgba(232,224,208,0.97); backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(0,0,0,0.08);
-    }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.6rem 5vw; background: rgba(232,224,208,0.97); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(0,0,0,0.08); }
     .nav-logo { font-family: 'Jost', sans-serif; font-size: 1.1rem; font-weight: 700; letter-spacing: 0.12em; color: #1a1208; text-decoration: none; text-transform: uppercase; }
     .nav-logo span { color: var(--gold); font-family: 'Cormorant Garamond', serif; font-style: italic; }
     .nav-back { font-size: 0.8rem; color: var(--gray); text-decoration: none; letter-spacing: 0.08em; transition: color 0.2s; }
     .nav-back:hover { color: var(--gold); }
-
-    .page-hero {
-      padding: 10rem 5vw 4rem;
-      max-width: 860px; margin: 0 auto;
-      border-bottom: 1px solid rgba(0,0,0,0.08);
-    }
-
+    .page-hero { padding: 10rem 5vw 4rem; max-width: 860px; margin: 0 auto; border-bottom: 1px solid rgba(0,0,0,0.08); }
     .page-tag { font-size: 0.68rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; display: block; }
-
-    .page-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 600; line-height: 1.1;
-      color: var(--white); margin-bottom: 1rem;
-    }
-
+    .page-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 600; line-height: 1.1; color: var(--white); margin-bottom: 1rem; }
     .page-meta { font-size: 0.8rem; color: var(--gray); letter-spacing: 0.06em; }
-
-    .policy-body {
-      max-width: 860px; margin: 0 auto;
-      padding: 4rem 5vw 6rem;
-    }
-
-    .policy-body h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.4rem; font-weight: 600;
-      color: var(--white); margin: 3rem 0 1rem;
-      padding-left: 1rem;
-      border-left: 3px solid var(--gold);
-    }
-
-    .policy-body p {
-      font-size: 0.95rem; color: var(--gray);
-      line-height: 1.9; margin-bottom: 1rem;
-      font-weight: 300;
-    }
-
-    .policy-body ul {
-      margin: 0.8rem 0 1.2rem 1.5rem;
-    }
-
-    .policy-body li {
-      font-size: 0.92rem; color: var(--gray);
-      line-height: 1.8; margin-bottom: 0.4rem;
-      font-weight: 300;
-    }
-
+    .policy-body { max-width: 860px; margin: 0 auto; padding: 4rem 5vw 6rem; }
+    .policy-body h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 600; color: var(--white); margin: 3rem 0 1rem; padding-left: 1rem; border-left: 3px solid var(--gold); }
+    .policy-body p { font-size: 0.95rem; color: var(--gray); line-height: 1.9; margin-bottom: 1rem; font-weight: 300; }
+    .policy-body ul { margin: 0.8rem 0 1.2rem 1.5rem; }
+    .policy-body li { font-size: 0.92rem; color: var(--gray); line-height: 1.8; margin-bottom: 0.4rem; font-weight: 300; }
     .policy-body li::marker { color: var(--gold); }
-
     .policy-body strong { color: var(--white); font-weight: 500; }
-
     .policy-body a { color: var(--gold); text-decoration: none; }
     .policy-body a:hover { text-decoration: underline; }
-
-    .highlight-box {
-      background: rgba(201,168,76,0.08);
-      border: 1px solid rgba(201,168,76,0.2);
-      border-left: 4px solid var(--gold);
-      padding: 1.2rem 1.5rem;
-      margin: 1.5rem 0;
-    }
+    .highlight-box { background: rgba(201,168,76,0.08); border: 1px solid rgba(201,168,76,0.2); border-left: 4px solid var(--gold); padding: 1.2rem 1.5rem; margin: 1.5rem 0; }
     .highlight-box p { margin: 0; font-size: 0.9rem; }
-
-    footer {
-      padding: 2rem 5vw;
-      border-top: 1px solid rgba(0,0,0,0.08);
-      background: var(--black-2);
-      display: flex; justify-content: space-between;
-      align-items: center; flex-wrap: wrap; gap: 1rem;
-    }
+    footer { padding: 2rem 5vw; border-top: 1px solid rgba(0,0,0,0.08); background: var(--black-2); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
     .footer-logo { font-family: 'Jost', sans-serif; font-size: 1rem; letter-spacing: 0.15em; color: #1a1208; font-weight: 700; text-transform: uppercase; }
     .footer-logo span { color: var(--gold); font-family: 'Cormorant Garamond', serif; font-style: italic; }
     .footer-info { font-size: 0.7rem; color: var(--gray); text-align: center; line-height: 1.6; }
-    footer .credit a { font-size: 0.7rem; color: var(--gray); text-decoration: none; transition: color 0.2s; }
+    footer .credit a { font-size: 0.7rem; color: var(--gray); text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; transition: color 0.2s; }
     footer .credit a:hover { color: var(--gold); }
-
-    #wa-float {
-      position: fixed; bottom: 2rem; right: 2rem;
-      width: 56px; height: 56px; background: #25D366;
-      border-radius: 50%; display: flex; align-items: center;
-      justify-content: center; z-index: 200;
-      box-shadow: 0 4px 20px rgba(37,211,102,0.35);
-      transition: transform 0.2s; text-decoration: none;
-    }
+    #wa-float { position: fixed; bottom: 2rem; right: 2rem; width: 56px; height: 56px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 200; box-shadow: 0 4px 20px rgba(37,211,102,0.35); transition: transform 0.2s; text-decoration: none; }
     #wa-float:hover { transform: scale(1.1); }
-
-    @media (max-width: 768px) {
-      footer { flex-direction: column; text-align: center; }
-    }
+    @media (max-width: 768px) { footer { flex-direction: column; text-align: center; } }
   </style>
 </head>
 <body>
@@ -140,93 +61,59 @@
 <div class="policy-body">
 
   <div class="highlight-box">
-    <p>Confidențialitatea datelor dumneavoastră personale este o prioritate pentru noi. Această politică explică ce date colectăm, de ce le colectăm și cum le protejăm, în conformitate cu Regulamentul (UE) 2016/679 (GDPR).</p>
+    <p>Acest site web este unul <strong>complet static</strong> — nu conține formulare funcționale, nu utilizează cookie-uri de tracking, nu colectează date în mod automat și nu procesează plăți online. Contactul cu cabinetul se realizează exclusiv prin telefon și WhatsApp.</p>
   </div>
 
   <h2>1. Operatorul de date</h2>
-  <p>Datele dumneavoastră cu caracter personal sunt prelucrate de:</p>
+  <p>Operatorul de date cu caracter personal este:</p>
   <ul>
     <li><strong>Denumire:</strong> Cabinet Avocat Individual Dinu Georgiana</li>
     <li><strong>CUI:</strong> 41836470</li>
-    <li><strong>Forma de exercitare:</strong> Cabinet Individual (CI DINU GEORGIANA)</li>
-    <li><strong>Barou:</strong> Baroul București — Decizia de intrare nr. 1939/1 din 15.10.2019</li>
-    <li><strong>Telefon / WhatsApp:</strong> <a href="tel:0720027200">0720 027 200</a></li>
+    <li><strong>Barou:</strong> Baroul București — Nr. tablou 1939/1 din 15.10.2019</li>
+    <li><strong>Contact:</strong> <a href="tel:0720027200">0720 027 200</a> / <a href="https://wa.me/40720027200">WhatsApp</a></li>
   </ul>
 
-  <h2>2. Ce date colectăm</h2>
-  <p>Prin intermediul acestui site web, putem colecta următoarele categorii de date cu caracter personal:</p>
+  <h2>2. Ce date colectează acest site</h2>
+  <p>Site-ul <strong>nu colectează și nu stochează</strong> date cu caracter personal în mod direct. Iată exact ce se întâmplă când interacționați cu el:</p>
   <ul>
-    <li><strong>Date de identificare:</strong> nume și prenume</li>
-    <li><strong>Date de contact:</strong> număr de telefon</li>
-    <li><strong>Date privind situația juridică:</strong> descrierea succintă a situației juridice furnizată voluntar prin formularul de contact</li>
-    <li><strong>Date tehnice:</strong> adresa IP, tipul de browser, paginile vizitate — colectate automat prin analytics (dacă este activat)</li>
-  </ul>
-  <p>Nu colectăm date sensibile (date privind sănătatea, originea rasială, convingerile religioase etc.) prin intermediul acestui site.</p>
-
-  <h2>3. Scopul prelucrării datelor</h2>
-  <p>Datele colectate prin formularul de contact sunt prelucrate exclusiv în următoarele scopuri:</p>
-  <ul>
-    <li>Răspuns la solicitările de consultanță juridică transmise prin formular</li>
-    <li>Programarea și organizarea consultațiilor juridice</li>
-    <li>Comunicarea cu potențialii clienți în legătură cu serviciile oferite</li>
-  </ul>
-  <p>Nu folosim datele dumneavoastră în scopuri de marketing și nu le transmitem unor terțe părți în scop comercial.</p>
-
-  <h2>4. Temeiul juridic al prelucrării</h2>
-  <p>Prelucrarea datelor se bazează pe:</p>
-  <ul>
-    <li><strong>Consimțământul dumneavoastră</strong> (Art. 6 alin. 1 lit. a GDPR) — prin completarea voluntară a formularului de contact</li>
-    <li><strong>Interesul legitim</strong> (Art. 6 alin. 1 lit. f GDPR) — în scopul răspunderii la solicitările de informații juridice</li>
-    <li><strong>Executarea unui contract</strong> (Art. 6 alin. 1 lit. b GDPR) — atunci când prelucrarea este necesară pentru prestarea serviciilor juridice solicitate</li>
+    <li><strong>Butonul de telefon (tel:)</strong> — apăsarea acestuia deschide aplicația de apeluri de pe dispozitivul dumneavoastră. Nicio dată nu trece prin sau nu este reținută de acest site.</li>
+    <li><strong>Butonul WhatsApp (wa.me)</strong> — apăsarea acestuia deschide aplicația WhatsApp direct pe dispozitivul dumneavoastră. Nicio dată nu trece prin sau nu este reținută de acest site.</li>
+    <li><strong>Google Fonts</strong> — site-ul încarcă fonturile de pe serverele Google (fonts.googleapis.com). Prin această conexiune, Google poate înregistra adresa IP a vizitatorului conform propriei politici de confidențialitate: <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a>.</li>
+    <li><strong>Hosting Vercel</strong> — site-ul este găzduit pe platforma Vercel, care poate înregistra automat date tehnice de acces (adresă IP, browser, pagini vizitate) conform propriei politici: <a href="https://vercel.com/legal/privacy-policy" target="_blank">vercel.com/legal/privacy-policy</a>. Aceste date nu sunt accesibile cabinetului și nu sunt utilizate în niciun scop.</li>
   </ul>
 
-  <h2>5. Durata stocării datelor</h2>
-  <p>Datele transmise prin formularul de contact sunt păstrate pe perioada necesară gestionării solicitării dumneavoastră și, dacă se stabilește o relație contractuală, pe durata mandatului și ulterior conform obligațiilor legale aplicabile profesiei de avocat.</p>
-  <p>Dacă nu se stabilește nicio relație contractuală, datele sunt șterse în termen de <strong>90 de zile</strong> de la ultima comunicare.</p>
-
-  <h2>6. Drepturile dumneavoastră</h2>
-  <p>În conformitate cu GDPR, beneficiați de următoarele drepturi:</p>
+  <h2>3. Date prelucrate în cadrul relației avocat-client</h2>
+  <p>Datele cu caracter personal sunt prelucrate exclusiv în contextul comunicării directe inițiate de dumneavoastră prin telefon sau WhatsApp. Acestea includ:</p>
   <ul>
-    <li><strong>Dreptul de acces</strong> — puteți solicita o copie a datelor pe care le deținem despre dumneavoastră</li>
+    <li>Nume și prenume</li>
+    <li>Număr de telefon</li>
+    <li>Informațiile juridice pe care alegeți să le comunicați voluntar</li>
+  </ul>
+  <p>Aceste date sunt prelucrate în temeiul <strong>consimțământului dumneavoastră</strong> (Art. 6 alin. 1 lit. a GDPR) și al <strong>executării unui contract</strong> de servicii juridice (Art. 6 alin. 1 lit. b GDPR), cu respectarea strictă a obligațiilor de confidențialitate ale profesiei de avocat prevăzute de Legea nr. 51/1995.</p>
+
+  <h2>4. Cookie-uri și tracking</h2>
+  <p>Acest site <strong>nu utilizează cookie-uri</strong> proprii, nu conține pixeli de tracking, nu integrează rețele de publicitate și nu folosește instrumente de analiză a comportamentului vizitatorilor (ex: Google Analytics, Facebook Pixel). Nu există niciun mecanism de urmărire a activității dumneavoastră pe site.</p>
+
+  <h2>5. Drepturile dumneavoastră conform GDPR</h2>
+  <p>În conformitate cu Regulamentul (UE) 2016/679, beneficiați de următoarele drepturi în legătură cu datele prelucrate în cadrul relației avocat-client:</p>
+  <ul>
+    <li><strong>Dreptul de acces</strong> — puteți solicita informații despre datele pe care le deținem</li>
     <li><strong>Dreptul la rectificare</strong> — puteți solicita corectarea datelor inexacte</li>
-    <li><strong>Dreptul la ștergere</strong> — puteți solicita ștergerea datelor ("dreptul de a fi uitat"), în condițiile prevăzute de lege</li>
-    <li><strong>Dreptul la restricționarea prelucrării</strong> — puteți solicita limitarea prelucrării datelor dumneavoastră</li>
-    <li><strong>Dreptul la portabilitatea datelor</strong> — puteți solicita primirea datelor într-un format structurat</li>
-    <li><strong>Dreptul la opoziție</strong> — puteți vă opune prelucrării datelor în anumite circumstanțe</li>
-    <li><strong>Dreptul de a retrage consimțământul</strong> — în orice moment, fără a afecta legalitatea prelucrării anterioare</li>
+    <li><strong>Dreptul la ștergere</strong> — puteți solicita ștergerea datelor, în condițiile legii</li>
+    <li><strong>Dreptul la opoziție</strong> — vă puteți opune prelucrării în anumite circumstanțe</li>
+    <li><strong>Dreptul de a retrage consimțământul</strong> — în orice moment, fără a afecta legalitatea prelucrărilor anterioare</li>
   </ul>
+  <p>Pentru exercitarea acestor drepturi, ne contactați la <a href="https://wa.me/40720027200">0720 027 200</a>. Răspundem în maximum <strong>30 de zile</strong>.</p>
 
-  <h2>7. Cum vă exercitați drepturile</h2>
-  <p>Pentru orice solicitare legată de datele dumneavoastră personale, ne puteți contacta prin:</p>
+  <h2>6. Autoritatea de supraveghere</h2>
+  <p>Dacă considerați că drepturile dumneavoastră au fost încălcate, puteți depune o plângere la:</p>
   <ul>
-    <li><strong>WhatsApp / Telefon:</strong> <a href="https://wa.me/40720027200">0720 027 200</a></li>
-  </ul>
-  <p>Vom răspunde solicitării dumneavoastră în termen de maximum <strong>30 de zile</strong> de la primire.</p>
-
-  <h2>8. Transmiterea datelor către terți</h2>
-  <p>Datele dumneavoastră personale nu sunt vândute, închiriate sau transmise unor terți în scopuri comerciale. Datele pot fi transmise doar în următoarele situații:</p>
-  <ul>
-    <li>Când este necesar pentru prestarea serviciilor juridice solicitate (instanțe, autorități publice)</li>
-    <li>Când există o obligație legală de transmitere</li>
-    <li>Furnizorilor de servicii tehnice care asistă operarea site-ului (ex: servicii de hosting), cu care avem încheiate acorduri de prelucrare a datelor</li>
-  </ul>
-
-  <h2>9. Securitatea datelor</h2>
-  <p>Implementăm măsuri tehnice și organizatorice adecvate pentru protejarea datelor dumneavoastră împotriva accesului neautorizat, pierderii sau distrugerii. Site-ul utilizează conexiune securizată HTTPS.</p>
-
-  <h2>10. Cookie-uri</h2>
-  <p>Acest site poate utiliza cookie-uri tehnice esențiale pentru funcționarea corectă a site-ului. Nu utilizăm cookie-uri de tracking sau publicitate fără consimțământul dumneavoastră explicit.</p>
-
-  <h2>11. Dreptul de a depune plângere</h2>
-  <p>Dacă considerați că drepturile dumneavoastră privind protecția datelor au fost încălcate, aveți dreptul de a depune o plângere la autoritatea de supraveghere din România:</p>
-  <ul>
-    <li><strong>Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal (ANSPDCP)</strong></li>
-    <li>Adresă: B-dul G-ral. Gheorghe Magheru nr. 28-30, Sector 1, București</li>
+    <li><strong>ANSPDCP</strong> — Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal</li>
     <li>Website: <a href="https://www.dataprotection.ro" target="_blank">www.dataprotection.ro</a></li>
   </ul>
 
-  <h2>12. Modificări ale politicii</h2>
-  <p>Ne rezervăm dreptul de a actualiza această politică de confidențialitate. Orice modificare semnificativă va fi adusă la cunoștința utilizatorilor prin actualizarea datei din antetul acestui document. Vă recomandăm să verificați periodic această pagină.</p>
+  <h2>7. Modificări ale politicii</h2>
+  <p>Orice modificare a acestei politici va fi reflectată prin actualizarea datei din antetul documentului. Vă recomandăm să verificați periodic această pagină.</p>
 
 </div>
 
@@ -236,7 +123,7 @@
     Cabinet Avocat Individual Dinu Georgiana · CUI 41836470<br>
     Barou București · Nr. tablou 1939/1 · © 2026
   </div>
-  <div class="credit"><a href="https://www.instagram.com/luca_vlc_" target="_blank">Designed by Luca</a></div>
+  <div class="credit"><a href="https://www.instagram.com/velichi.luca" target="_blank"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>Designed by Luca</a></div>
 </footer>
 
 <a href="https://wa.me/40720027200" target="_blank" id="wa-float" aria-label="WhatsApp">
