@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dinugeorgiana.ro/sitemap.xml
+Sitemap: https://avocat-dinu-georgiana.ro/sitemap.xml
