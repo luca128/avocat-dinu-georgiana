@@ -762,16 +762,58 @@
 
     /* ─── FOOTER ─── */
     footer {
-      padding: 2rem 5vw;
+      padding: 2rem 5vw 1rem;
       border-top: 1px solid rgba(201,168,76,0.12);
+      display: flex; flex-direction: column;
+      align-items: center; gap: 1rem;
+    }
+
+    .footer-top {
+      width: 100%;
       display: flex; justify-content: space-between;
       align-items: center; flex-wrap: wrap; gap: 1rem;
     }
 
+    .footer-logos-anpc {
+      display: flex; align-items: center; gap: 1.5rem;
+    }
+
+    .footer-logos-anpc a {
+      display: flex; align-items: center;
+      opacity: 0.85;
+      transition: opacity 0.2s;
+    }
+
+    .footer-logos-anpc a:hover { opacity: 1; }
+
+    .footer-bottom {
+      width: 100%;
+      border-top: 1px solid rgba(0,0,0,0.06);
+      padding-top: 1rem;
+      text-align: center;
+    }
+
+    .footer-bottom a {
+      font-size: 0.68rem;
+      color: var(--gray);
+      text-decoration: none;
+      letter-spacing: 0.06em;
+      transition: color 0.2s;
+    }
+
+    .footer-bottom a span.luca-name {
+      color: var(--gold);
+      font-weight: 500;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .footer-bottom a:hover span.luca-name { color: #a07828; }
+
     .footer-logo { font-family: 'Jost', sans-serif; font-size: 1rem; letter-spacing: 0.15em; color: var(--white); font-weight: 700; text-transform: uppercase; }
     .footer-logo span { color: #1a1208; font-family: 'Cormorant Garamond', serif; font-style: italic; }
 
-    footer .copy { font-size: 0.7rem; color: var(--gray); letter-spacing: 0.06em; }
+    footer .copy { font-size: 0.7rem; color: var(--gray); letter-spacing: 0.06em; text-align: center; }
     footer .credit a { font-size: 0.7rem; color: var(--gray); text-decoration: none; transition: color 0.2s; }
     footer .credit a:hover { color: var(--gold); }
 
@@ -1118,10 +1160,26 @@
 
 <!-- ─── FOOTER ─── -->
 <footer>
-  <div class="footer-logo">AV. DINU GEORGIANA</div>
-  <div class="copy">© 2026 Cabinet Avocat Dinu Georgiana · CUI 41836470 · Barou București · Nr. tablou 1939/1</div>
-  <div class="copy"><a href="gdpr.html" style="color:var(--gray);text-decoration:none;font-size:0.7rem;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='var(--gray)'">Politica de Confidențialitate</a></div>
-  <div class="credit"><a href="https://www.instagram.com/velichi.luca" target="_blank" style="display:inline-flex;align-items:center;gap:0.4rem;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>Designed by Luca</a></div>
+  <div class="footer-top">
+    <div class="footer-logo">AV. DINU GEORGIANA</div>
+    <div class="copy">© 2026 Cabinet Avocat Dinu Georgiana · CUI 41836470 · Barou București · Nr. tablou 1939/1</div>
+    <div class="copy"><a href="gdpr.html" style="color:var(--gray);text-decoration:none;font-size:0.7rem;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='var(--gray)'">Politica de Confidențialitate</a></div>
+  </div>
+
+  <div class="footer-logos-anpc">
+    <a href="https://anpc.ro/ce-este-sal/" target="_blank" rel="noopener">
+      <img src="anpc-sal.png" alt="ANPC SAL" style="height:40px; width:auto;" />
+    </a>
+    <a href="https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home.show&lng=RO" target="_blank" rel="noopener">
+      <img src="anpc-sol.png" alt="SOL" style="height:40px; width:auto;" />
+    </a>
+  </div>
+
+  <div class="footer-bottom">
+    <a href="https://www.velichi-luca.agency" target="_blank" rel="noopener">
+      Designed by <span class="luca-name">Luca ↗</span>
+    </a>
+  </div>
 </footer>
 
 <!-- ─── WHATSAPP FLOAT ─── -->
